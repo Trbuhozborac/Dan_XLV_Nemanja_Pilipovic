@@ -134,7 +134,7 @@ namespace Zadatak_1.ViewModels
                             product.Stored = true;
                             db.SaveChanges();
                         }
-                        MessageBox.Show("Product Stored Successfully!");
+                        PutedOnStorage();
                         main.Close();
                     }
                     catch (Exception ex)
@@ -196,6 +196,16 @@ namespace Zadatak_1.ViewModels
             };
             OnNotification.Invoke();
         }
+
+        public void PutedOnStorage()
+        {
+            OnNotification += () =>
+            {
+                MessageBox.Show("Product Stored Successfully!");
+            };
+            OnNotification.Invoke();
+        }
+
 
         #endregion
     }

@@ -158,35 +158,42 @@ namespace Zadatak_1.ViewModels
 
         private void DeleteProductExecute()
         {
-            MessageBoxResult result = MessageBox.Show("Are you sure?", "Delete Poduct", MessageBoxButton.YesNo);
-            switch (result)
+            if (Product.Stored == true)
             {
-                case MessageBoxResult.Yes:
-                    try
-                    {
-                        using(WarehouseDbEntities db = new WarehouseDbEntities())
-                        {
-                            tblProduct product = db.tblProducts.Where(x => x.Id == Product.Id).FirstOrDefault();
-                            if (product != null)
-                            {
-                                db.tblProducts.Remove(product);
-                                db.SaveChanges();
-                                MessageBox.Show("Product Deleted Successfully!");
-                                Log();
-                                AllProducts = GetAllProducts();
-                            }
-                            main.Close();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        System.Diagnostics.Debug.WriteLine(ex.Message.ToString());
-
-                    }
-                    break;
-                case MessageBoxResult.No:                    
-                    break;
+                MessageBox.Show("Cant Delete Stored Products.");
             }
+            else
+            {
+                MessageBoxResult result = MessageBox.Show("Are you sure?", "Delete Poduct", MessageBoxButton.YesNo);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+                        try
+                        {
+                            using (WarehouseDbEntities db = new WarehouseDbEntities())
+                            {
+                                tblProduct product = db.tblProducts.Where(x => x.Id == Product.Id).FirstOrDefault();
+                                if (product != null)
+                                {
+                                    db.tblProducts.Remove(product);
+                                    db.SaveChanges();
+                                    MessageBox.Show("Product Deleted Successfully!");
+                                    Log();
+                                    AllProducts = GetAllProducts();
+                                }
+                                main.Close();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.WriteLine(ex.Message.ToString());
+
+                        }
+                        break;
+                    case MessageBoxResult.No:
+                        break;
+                }
+            }           
         }
 
         private bool CanDeleteProduct()
