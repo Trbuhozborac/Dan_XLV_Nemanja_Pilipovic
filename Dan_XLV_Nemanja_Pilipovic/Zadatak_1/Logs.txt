@@ -5,3 +5,8 @@
 [13. јул 2020.] [21:58] Product Updated.
 [13. јул 2020.] [21:58] Product Updated.
 [13. јул 2020.] [21:58] Product Updated.
+[14. јул 2020.] [1:08] Product Added to the Database.
+[14. јул 2020.] [1:10] Product Updated.
+[14. јул 2020.] [1:10] Product Added to the Database.
+[14. јул 2020.] [1:11] Product Added to the Database.
+[14. јул 2020.] [1:12] Product Deleted from the Database.

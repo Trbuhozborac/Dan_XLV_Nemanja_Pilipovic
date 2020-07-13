@@ -120,6 +120,7 @@ namespace Zadatak_1.ViewModels
             AddProductView view = new AddProductView();
             view.ShowDialog();
             AllProducts = GetAllProducts();
+            main.Close();
         }
 
         private bool CanAddProduct()
@@ -174,6 +175,7 @@ namespace Zadatak_1.ViewModels
                                 Log();
                                 AllProducts = GetAllProducts();
                             }
+                            main.Close();
                         }
                     }
                     catch (Exception ex)
