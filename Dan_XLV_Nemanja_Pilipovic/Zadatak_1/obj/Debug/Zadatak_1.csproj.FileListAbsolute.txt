@@ -25,3 +25,5 @@ C:\Users\Pipi\Desktop\45\Dan_XLV_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Views\Man
 C:\Users\Pipi\Desktop\45\Dan_XLV_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Views\WarehouseView.baml
 C:\Users\Pipi\Desktop\45\Dan_XLV_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Views\AddProductView.g.cs
 C:\Users\Pipi\Desktop\45\Dan_XLV_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Views\AddProductView.baml
+C:\Users\Pipi\Desktop\45\Dan_XLV_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Views\UpdateProductView.g.cs
+C:\Users\Pipi\Desktop\45\Dan_XLV_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Views\UpdateProductView.baml

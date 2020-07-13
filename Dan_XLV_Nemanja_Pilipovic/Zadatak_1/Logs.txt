@@ -1,12 +1,7 @@
 
-[13. јул 2020.] [19:10] Product Added to the Database
-[13. јул 2020.] [19:35] Product Added to the Database
-[13. јул 2020.] [19:36] Product Added to the Database
-[13. јул 2020.] [19:38] Product Added to the Database
-[13. јул 2020.] [19:42] Product Added to the Database
-[13. јул 2020.] [19:43] Product Added to the Database
-[13. јул 2020.] [19:48] Product Added to the Database
-[13. јул 2020.] [19:49] Product Added to the Database
-[13. јул 2020.] [19:51] Product Added to the Database
-[13. јул 2020.] [19:55] Product Added to the Database
-[13. јул 2020.] [19:56] Product Added to the Database
+[13. јул 2020.] [21:58] Product Added to the Database.
+[13. јул 2020.] [21:58] Product Deleted from the Database.
+[13. јул 2020.] [21:58] Product Updated.
+[13. јул 2020.] [21:58] Product Updated.
+[13. јул 2020.] [21:58] Product Updated.
+[13. јул 2020.] [21:58] Product Updated.

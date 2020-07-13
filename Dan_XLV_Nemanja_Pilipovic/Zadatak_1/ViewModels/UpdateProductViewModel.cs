@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using Zadatak_1.Commands;
@@ -8,20 +9,25 @@ using Zadatak_1.Views;
 
 namespace Zadatak_1.ViewModels
 {
-    class AddProductViewModel : BaseViewModel
+    class UpdateProductViewModel : BaseViewModel
     {
         #region Objects
 
-        AddProductView main;
+        UpdateProductView main;
 
         #endregion
 
         #region Constructors
 
-        public AddProductViewModel(AddProductView mainOpen)
+        public UpdateProductViewModel(UpdateProductView mainOpen)
         {
             main = mainOpen;
-            Product = new tblProduct();
+        }
+
+        public UpdateProductViewModel(UpdateProductView mainOpen, tblProduct product)
+        {
+            main = mainOpen;
+            Product = product;
         }
 
         #endregion
@@ -40,21 +46,20 @@ namespace Zadatak_1.ViewModels
             }
         }
 
-
         #endregion
 
         #region Commands
 
-        private ICommand addP;
-        public ICommand AddP
+        private ICommand save;
+        public ICommand Save
         {
             get
             {
-                if (addP == null)
+                if (save == null)
                 {
-                    addP = new RelayCommand(param => AddProduct(), param => CanAddProduct());
+                    save = new RelayCommand(param => SaveProductExecute(), param => CanSaveProduct());
                 }
-                return addP;
+                return save;
             }
         }
 
@@ -75,27 +80,31 @@ namespace Zadatak_1.ViewModels
 
         #region Functions
 
-        private void AddProduct()
+        private void SaveProductExecute()
         {
-            Product.Stored = false;
             try
             {
-                using (WarehouseDbEntities db = new WarehouseDbEntities())
+                using(WarehouseDbEntities db = new WarehouseDbEntities())
                 {
-                    db.tblProducts.Add(Product);
+                    tblProduct updatedProcut = db.tblProducts.Where(x => x.Id == Product.Id).FirstOrDefault();
+                    updatedProcut.Name = Product.Name;
+                    updatedProcut.Code = Product.Code;
+                    updatedProcut.Quantity = Product.Quantity;
+                    updatedProcut.Price = Product.Price;
+                    updatedProcut.Stored = Product.Stored;
                     db.SaveChanges();
                 }
-                MessageBox.Show("Product Added Successfully!");
+                MessageBox.Show("Product Updated Successfully!");
                 Log();
                 main.Close();
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine(ex.Message.ToString());
+                System.Diagnostics.Debug.WriteLine(ex.Message.ToString());                
             }
         }
 
-        private bool CanAddProduct()
+        private bool CanSaveProduct()
         {
             if (string.IsNullOrEmpty(Product.Name) || string.IsNullOrEmpty(Product.Code.ToString()) ||
                 string.IsNullOrEmpty(Product.Quantity.ToString()) || string.IsNullOrEmpty(Product.Price.ToString())
@@ -141,7 +150,7 @@ namespace Zadatak_1.ViewModels
             {
                 if (File.Exists(_location))
                 {
-                    File.AppendAllText(_location, $"\n[{DateTime.Now.ToLongDateString()}] [{DateTime.Now.ToShortTimeString()}] Product Added to the Database.");
+                    File.AppendAllText(_location, $"\n[{DateTime.Now.ToLongDateString()}] [{DateTime.Now.ToShortTimeString()}] Product Updated.");
                 }
                 else
                 {
@@ -149,9 +158,8 @@ namespace Zadatak_1.ViewModels
                 }
             };
             OnNotification.Invoke();
-
         }
-        
+
         #endregion
     }
 }

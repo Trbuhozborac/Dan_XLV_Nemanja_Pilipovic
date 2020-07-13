@@ -50,16 +50,16 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <!--<DataGridTemplateColumn>
+                    <DataGridTemplateColumn>
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Name="btnUpdate" Content="Update"
-                                    Command="{Binding DataContext.DeclineOrder, UpdateSourceTrigger=PropertyChanged, 
-                                RelativeSource={RelativeSource UpdateProduct, AncestorType={x:Type Window}}}"
+                                    Command="{Binding DataContext.UpdateProduct, UpdateSourceTrigger=PropertyChanged, 
+                                RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"
                                     Margin="4" FontWeight="Bold"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>-->
+                    </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

@@ -98,6 +98,19 @@ namespace Zadatak_1.ViewModels
             }
         }
 
+        private ICommand updateProduct;
+        public ICommand UpdateProduct
+        {
+            get
+            {
+                if (updateProduct == null)
+                {
+                    updateProduct = new RelayCommand(param => UpdateProductExecute(), param => CanUpdateProduct());
+                }
+                return updateProduct;
+            }
+        }
+
         #endregion
 
         #region Functions
@@ -199,7 +212,7 @@ namespace Zadatak_1.ViewModels
             {
                 if (File.Exists(_location))
                 {
-                    File.AppendAllText(_location, $"\n[{DateTime.Now.ToLongDateString()}] [{DateTime.Now.ToShortTimeString()}] Product Deleted from the Database");
+                    File.AppendAllText(_location, $"\n[{DateTime.Now.ToLongDateString()}] [{DateTime.Now.ToShortTimeString()}] Product Deleted from the Database.");
                 }
                 else
                 {
@@ -207,6 +220,18 @@ namespace Zadatak_1.ViewModels
                 }
             };
             OnNotification.Invoke();
+        }
+
+        private void UpdateProductExecute()
+        {
+            UpdateProductView view = new UpdateProductView(Product);
+            view.ShowDialog();
+            AllProducts = GetAllProducts();
+        }
+
+        private bool CanUpdateProduct()
+        {
+            return true;
         }
 
         #endregion

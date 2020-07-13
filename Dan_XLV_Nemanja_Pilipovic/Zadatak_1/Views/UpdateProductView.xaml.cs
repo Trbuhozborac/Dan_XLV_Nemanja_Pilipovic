@@ -1,20 +1,27 @@
 ﻿using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Input;
+using Zadatak_1.Models;
 using Zadatak_1.ViewModels;
 
 namespace Zadatak_1.Views
 {
     /// <summary>
-    /// Interaction logic for AddProductView.xaml
+    /// Interaction logic for UpdateProductView.xaml
     /// </summary>
-    public partial class AddProductView : Window
+    public partial class UpdateProductView : Window
     {
-        public AddProductView()
+        public UpdateProductView()
         {
             InitializeComponent();
-            this.DataContext = new AddProductViewModel(this);
-        }       
+            this.DataContext = new UpdateProductViewModel(this);
+        }
+
+        public UpdateProductView(tblProduct product)
+        {
+            InitializeComponent();
+            this.DataContext = new UpdateProductViewModel(this, product);
+        }
 
         private void LetterValidationTextBox(object sender, TextCompositionEventArgs e)
         {
