@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Input;
 using Zadatak_1.Commands;
+using Zadatak_1.Views;
 
 namespace Zadatak_1.ViewModels
 {
@@ -86,11 +87,13 @@ namespace Zadatak_1.ViewModels
         {
             if (Username == "Mag2019" && Password == "Mag2019")
             {
-
+                WarehouseView view = new WarehouseView();
+                view.ShowDialog();
             }
             else if(Username == "Man2019" && Password == "Man2019")
             {
-
+                ManagerView view = new ManagerView();
+                view.ShowDialog();
             }
             else
             {

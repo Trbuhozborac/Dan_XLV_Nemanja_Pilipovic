@@ -19,3 +19,9 @@ C:\Users\Pipi\Desktop\45\Dan_XLV_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Zadatak_1
 C:\Users\Pipi\Desktop\45\Dan_XLV_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Zadatak_1.csproj.CopyComplete
 C:\Users\Pipi\Desktop\45\Dan_XLV_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Zadatak_1.exe
 C:\Users\Pipi\Desktop\45\Dan_XLV_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Zadatak_1.pdb
+C:\Users\Pipi\Desktop\45\Dan_XLV_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Views\ManagerView.g.cs
+C:\Users\Pipi\Desktop\45\Dan_XLV_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Views\WarehouseView.g.cs
+C:\Users\Pipi\Desktop\45\Dan_XLV_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Views\ManagerView.baml
+C:\Users\Pipi\Desktop\45\Dan_XLV_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Views\WarehouseView.baml
+C:\Users\Pipi\Desktop\45\Dan_XLV_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Views\AddProductView.g.cs
+C:\Users\Pipi\Desktop\45\Dan_XLV_Nemanja_Pilipovic\Zadatak_1\obj\Debug\Views\AddProductView.baml
