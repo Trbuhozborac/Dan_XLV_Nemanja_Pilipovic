@@ -10,3 +10,4 @@
 [14. јул 2020.] [1:10] Product Added to the Database.
 [14. јул 2020.] [1:11] Product Added to the Database.
 [14. јул 2020.] [1:12] Product Deleted from the Database.
+[14. јул 2020.] [1:45] Product Added to the Database.
