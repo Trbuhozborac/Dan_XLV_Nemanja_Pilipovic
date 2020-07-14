@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
 using Zadatak_1.Commands;
 using Zadatak_1.Models;
@@ -92,6 +91,10 @@ namespace Zadatak_1.ViewModels
 
         #region Functions
 
+        /// <summary>
+        /// Gets all Products from the Database
+        /// </summary>
+        /// <returns></returns>
         private List<tblProduct> GetAllProducts()
         {
             try
@@ -110,16 +113,26 @@ namespace Zadatak_1.ViewModels
             }
         }
 
+        /// <summary>
+        /// Close Current Window
+        /// </summary>
         private void CloseExecute()
         {
             main.Close();
         }
 
+        /// <summary>
+        /// Check if Current Window can be closed
+        /// </summary>
+        /// <returns></returns>
         private bool CanCloseExecute()
         {
             return true;
         }
 
+        /// <summary>
+        /// Put Product on Storage if Product can fit into warehouse
+        /// </summary>
         private void PutOnStorageExecute()
         {
             if(Product.Stored == false)
@@ -153,12 +166,19 @@ namespace Zadatak_1.ViewModels
             }
         }
 
+        /// <summary>
+        /// Checks if Product can be stored
+        /// </summary>
+        /// <returns></returns>
         private bool CanPutOnStorage()
         {
             return true;
         }
 
-
+        /// <summary>
+        /// Get current capacity of warehouse
+        /// </summary>
+        /// <returns></returns>
         private int GetNumberOfProcuts()
         {
             try

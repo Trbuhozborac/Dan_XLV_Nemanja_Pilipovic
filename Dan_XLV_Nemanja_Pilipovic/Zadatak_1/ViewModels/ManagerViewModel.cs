@@ -115,6 +115,9 @@ namespace Zadatak_1.ViewModels
 
         #region Functions
 
+        /// <summary>
+        /// Open Window for adding the Product
+        /// </summary>
         private void AddProduct()
         {
             AddProductView view = new AddProductView();
@@ -123,21 +126,36 @@ namespace Zadatak_1.ViewModels
             main.Close();
         }
 
+        /// <summary>
+        /// Checks if Product can be Added
+        /// </summary>
+        /// <returns></returns>
         private bool CanAddProduct()
         {
             return true;
         }
 
+        /// <summary>
+        /// Close the Current Window
+        /// </summary>
         private void CloseExecute()
         {
             main.Close();
         }
 
+        /// <summary>
+        /// Checks if Current Window can be closed
+        /// </summary>
+        /// <returns></returns>
         private bool CanCloseExecute()
         {
             return true;
         }
 
+        /// <summary>
+        /// Gets all Products from the Database
+        /// </summary>
+        /// <returns>All Products from Database</returns>
         private List<tblProduct> GetAllProducts()
         {
             List<tblProduct> products = new List<tblProduct>();
@@ -156,6 +174,9 @@ namespace Zadatak_1.ViewModels
             }
         }
 
+       /// <summary>
+       /// Deletes Product that is not stored
+       /// </summary>
         private void DeleteProductExecute()
         {
             if (Product.Stored == true)
@@ -196,6 +217,10 @@ namespace Zadatak_1.ViewModels
             }           
         }
 
+        /// <summary>
+        /// Checks if Product can be Deleted
+        /// </summary>
+        /// <returns></returns>
         private bool CanDeleteProduct()
         {
             return true;

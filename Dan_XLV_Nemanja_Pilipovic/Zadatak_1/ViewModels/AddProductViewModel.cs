@@ -75,6 +75,9 @@ namespace Zadatak_1.ViewModels
 
         #region Functions
 
+        /// <summary>
+        /// Adds Products to the Database
+        /// </summary>
         private void AddProduct()
         {
             Product.Stored = false;
@@ -95,6 +98,10 @@ namespace Zadatak_1.ViewModels
             }
         }
 
+        /// <summary>
+        /// Checks if all fields are populate so User can exucute Saving the Product
+        /// </summary>
+        /// <returns></returns>
         private bool CanAddProduct()
         {
             if (string.IsNullOrEmpty(Product.Name) || string.IsNullOrEmpty(Product.Code.ToString()) ||
@@ -111,11 +118,18 @@ namespace Zadatak_1.ViewModels
             }
         }
 
+        /// <summary>
+        /// Close the Current Window
+        /// </summary>
         private void CloseExecute()
         {
             main.Close();
         }
 
+        /// <summary>
+        /// Checks if Main Window can be closed
+        /// </summary>
+        /// <returns></returns>
         private bool CanCloseExecute()
         {
             return true;

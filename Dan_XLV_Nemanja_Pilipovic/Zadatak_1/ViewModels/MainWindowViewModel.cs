@@ -83,6 +83,9 @@ namespace Zadatak_1.ViewModels
 
         #region Functions
 
+        /// <summary>
+        /// Checks inputed Credentials and Login User or Notify User that User or Password are Incorrect
+        /// </summary>
         private void LogInExecute()
         {
             if (Username == "Mag2019" && Password == "Mag2019")
@@ -101,6 +104,10 @@ namespace Zadatak_1.ViewModels
             }
         }
 
+        /// <summary>
+        /// Checks if Username and Password field are populated so Login can be executed
+        /// </summary>
+        /// <returns></returns>
         private bool CanLogInExecute()
         {
             if (string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Password) ||

@@ -80,6 +80,9 @@ namespace Zadatak_1.ViewModels
 
         #region Functions
 
+        /// <summary>
+        /// Save Updated Info about Product to the Database
+        /// </summary>
         private void SaveProductExecute()
         {
             try
@@ -104,6 +107,10 @@ namespace Zadatak_1.ViewModels
             }
         }
 
+        /// <summary>
+        /// Checks if all fields are populated so Product can be Saved
+        /// </summary>
+        /// <returns></returns>
         private bool CanSaveProduct()
         {
             if (string.IsNullOrEmpty(Product.Name) || string.IsNullOrEmpty(Product.Code.ToString()) ||
@@ -120,11 +127,18 @@ namespace Zadatak_1.ViewModels
             }
         }
 
+        /// <summary>
+        /// Close the Current Window
+        /// </summary>
         private void CloseExecute()
         {
             main.Close();
         }
 
+        /// <summary>
+        /// Check if Current Window can be Closed
+        /// </summary>
+        /// <returns></returns>
         private bool CanCloseExecute()
         {
             return true;
